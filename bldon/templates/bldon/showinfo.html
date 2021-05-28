@@ -1,0 +1,48 @@
+<title> Info </title>
+<div class='main'>
+{% block content %}
+  <h2 style='background-color:#B90E0A; color:#E3E7EB'>Donor Info</h2>
+
+  <t>
+    <h4> Donor Name    : {{ donor }}</h4>
+    <h4> Phone         : {{ donor.phone }}</h4>
+    <h4> Email         : {{ donor.email }}</h4>
+    <h4> DOB           : {{ donor.date_of_birth }}</h4>
+    <h4> Address       : {{ donor.address }}</h4>
+    <h4> Blood Type    : {{ donor.blood_group }}</h4>
+    <h4> Gender        : {{ donor.gender }}</h4>
+    <h4> Last Donated  : {{ donor.last_donate }}</h4>
+    <h4> Reward Points : {{ donor.reward }}</h4>
+  </t>
+</br></br>
+
+  {% if agereq and healthreq%}
+    <a class= 'btn' href="{% url 'appointment' donor.id%}" style='background-color:tomato; color:black' ><br/><b>Become a Donor</b></a>
+{%endif%}
+  {% if healthreq and not agereq%}
+    <h4> You cannot donate as you are underage. Come back in {{aval}} days! </h4>
+    {%endif%}
+  {% if agereq and not healthreq%}
+    <h4> You have already donated in last 3 months and hence cannot donate. Come back in {{hval}} days! </h4>
+    {%endif%}
+</br></br>
+    <a href="{% url 'main' %}"><input align='center' type="submit" value="Go Back to Home Page" ></a>
+{% endblock %}
+</div>
+
+<style>
+  .main{
+    text-align:center;
+    font-family:Georgia;
+    margin:auto;
+  }
+  .btn{
+    display:block;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 1px solid red;
+    margin:auto;
+    text-color:'black';
+  }
+</style>

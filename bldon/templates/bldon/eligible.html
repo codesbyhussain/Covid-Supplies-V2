@@ -1,0 +1,21 @@
+<title> Eligibility Check </title>
+<div class='main'>
+{% block content %}
+  <h2 style='background-color:#B90E0A; color:#E3E7EB'>ELIGIBILITY CHECK</h2>
+  <form action="." method="POST" align='center'>
+    {% csrf_token %}
+<p align='center'>
+      {{form1.as_p}}
+</p>
+    <input type="submit" class="btn btn-outline-primary btn-sm" value="Submit" >
+  </form>
+{% endblock %}
+</div>
+
+
+  <style>
+    .main{
+      text-align:center;
+      font-family:Georgia;
+    }
+  </style>

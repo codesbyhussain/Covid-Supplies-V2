@@ -1,0 +1,22 @@
+{% load static %}
+
+<html>
+</br>
+</br>
+
+<h2 style='background-color:#B90E0A; color:#E3E7EB' align = 'center'>Polls :Vote by clicking on the question</h2>
+
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+    <hr></br>
+        <li><a href="{% url 'detail' question.id%}">{{ question.question_text }}</a></li>
+        </br>
+        <hr>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+
+</html>
