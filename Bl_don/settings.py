@@ -128,9 +128,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
-    'Z:/Django Apps/Albert code/Blood-Donation-System/Blood_Donation_system/venv/static',
+    'Z:/Django Apps/Albert code/Blood-Donation-System/Blood_Donation_system/venv/static', #Basically location of static files (Photos)
     'static',
-    'Z:/Django Apps/Albert code/Blood-Donation-System/venv/static',
+    'Z:/Django Apps/Albert code/Blood-Donation-System/venv/static', #Same here
 ]
 STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.FileSystemFinder",
@@ -142,7 +142,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 #Email settings
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'avenger.hussain14@gmail.com'
-EMAIL_HOST_PASSWORD = 'ayymaignobpqkjmi'
+EMAIL_HOST_USER = '' #Enter from email
+EMAIL_HOST_PASSWORD = '' #Enter password provided by gmail for third party use of email
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
