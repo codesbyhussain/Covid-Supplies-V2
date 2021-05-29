@@ -53,7 +53,7 @@ def app(request, donor_id):
                 don.last_donate= datetime.date.today()
                 don.save()
                 email_val= getattr(don, 'email')
-                send_mail(don, str(obj), 'avenger.hussain14@gmail.com', [email_val])
+                send_mail(don, str(obj), '#Add senders email address', [email_val])
                 return render(request, 'bldon/Emailsent.html')
             except Donor.DoesNotExist:
                 raise Http404("Donor does not exist")
