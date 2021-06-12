@@ -9,6 +9,6 @@ You can find the documentation on : https://docs.google.com/document/d/1SBW3CEKd
 - Someone figure out a way to give shoutouts to the photographers
 
 # TODO
-- Add a homepage.
+- Add Django to the project
 - Add a Shop page for users to easily buy supplies.
 - Add a page for stats.
