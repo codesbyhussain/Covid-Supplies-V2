@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  background-color: #FBFBFF;
+}
+/* Header begin */
+.topnav {
+  background-color: #0D0106;
+  overflow: hidden;
+  width: 100%;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #FBFBFF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #FBFBFF;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #3626A7;
+  color: #FBFBFF;
+}
+
+.topnav .icon {
+  display: none;
+}
+/*Header end*/
+/*Slideshow begin*/
+
+/*Slideshow end*/
